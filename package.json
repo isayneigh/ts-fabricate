@@ -1,0 +1,36 @@
+{
+  "name": "ts-fabricate",
+  "version": "1.0.0",
+  "description": "ts-fabricate supplies decorators and classes to facilitate random data generation in TypeScript",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isayneigh/ts-fabricate.git"
+  },
+  "keywords": [
+    "data-generation",
+    "random",
+    "data",
+    "reflection",
+    "generation",
+    "random-data"
+  ],
+  "author": "Joshua Landi",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/isayneigh/ts-fabricate/issues"
+  },
+  "homepage": "https://github.com/isayneigh/ts-fabricate#readme",
+  "devDependencies": {
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^7.x.x",
+    "reflect-metadata": "^0.1.x"
+  }
+}
