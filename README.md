@@ -39,7 +39,7 @@ Optionally, with the `@type` decorator, you can also pass in a function which wi
 
 ## Class usage
 
-As mentioned in Decorator usage, you can generate your defined classes with `Fabricate.create(Type)` where `Type` must be a defined class with decorators.
+As mentioned in [Decorator usage](#decorator-usage), you can generate your defined classes with `Fabricate.create(Type)` where `Type` must be a defined class with decorators.
 
 Alternatively, you can use the builder to create your objects in line in your test (they must still be classes)
 - `Fabricate.build(Animal).with('name', () => 'Happy Dog').done()`
