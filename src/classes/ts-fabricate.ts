@@ -1,7 +1,7 @@
 
 import { faker } from '@faker-js/faker';
 import 'reflect-metadata';
-import { TSRandomBuilder } from './ts-random-builder';
+import { FabricateBuilder } from './ts-fabricate-builder';
 
 /**
  * Class used to randomly generate or build a class.
@@ -9,8 +9,8 @@ import { TSRandomBuilder } from './ts-random-builder';
  * include decorators provided by the equipp-spa-lib package.  These include
  * {@link type}, {@link enumeration}, and {@link array}
  */
-export class TSRandom {
-    public static generate<T>(_: new () => T): T {
+export class Fabricate {
+    public static create<T>(_: new () => T): T {
       let random: T = new _();
       let properties = Object.getOwnPropertyDescriptors(_.prototype);
       let keys = Object.keys(properties).filter((k) => k !== 'constructor');
@@ -22,12 +22,12 @@ export class TSRandom {
       return random;
     }
   
-    public static generateMany<T>(_: new () => T, count = 5): T[] {
-      return Array(count).fill((() => this.generate(_))());
+    public static createMany<T>(_: new () => T, count = 5): T[] {
+      return Array(count).fill((() => this.create(_))());
     }
   
-    public static build<T>(_: new () => T): TSRandomBuilder<T> {
-      return new TSRandomBuilder(this.generate(_));
+    public static build<T>(_: new () => T): FabricateBuilder<T> {
+      return new FabricateBuilder(this.create(_));
     }
   
     private static getRandomValue(obj: any, key: any) {
@@ -60,7 +60,7 @@ export class TSRandom {
       } else if (constructedType instanceof Boolean) {
         return type.data !== undefined ? type.data() : faker.datatype.boolean();
       } else {
-        return TSRandom.generate(
+        return Fabricate.create(
           type.constructor !== undefined ? type.constructor : type
         );
       }

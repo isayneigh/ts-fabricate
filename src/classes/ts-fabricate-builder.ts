@@ -1,4 +1,4 @@
-export class TSRandomBuilder<T> {
+export class FabricateBuilder<T> {
     public data: T;
     constructor(data: T) {
       this.data = data;

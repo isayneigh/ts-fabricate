@@ -18,7 +18,10 @@
     "data",
     "reflection",
     "generation",
-    "random-data"
+    "random-data",
+    "fake-data",
+    "fake data",
+    "fake"
   ],
   "author": "Joshua Landi",
   "license": "GPL-3.0-or-later",
