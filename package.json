@@ -1,6 +1,6 @@
 {
   "name": "ts-fabricate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ts-fabricate supplies decorators and classes to facilitate random data generation in TypeScript",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
